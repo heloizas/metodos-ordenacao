@@ -1,21 +1,21 @@
 #include <stdio.h>
 #include <string>
 
-#ifndef PLANETA_H
-#define PLANETA_H
+#ifndef VETOR_H
+#define VETOR_H
 
 using namespace std;
 
-class Planeta {
+class Vetor {
     private:
         string nome;
         int distancia;
     public:
-        Planeta();
+        Vetor();
         void adicionarNome(string);
         void adicionarDistancia(int);
-        ~Planeta();
-    friend class Tratamento;
+        ~Vetor();
+    friend class Ordenacao;
 };
 
 #endif

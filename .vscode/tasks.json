@@ -10,8 +10,9 @@
                 "-lc++",
                 "-g",
                 "src/Main.cc",
-                "src/Tratamento.cc",
-                "src/Planeta.cc",
+                "src/Ordenacao.cc",
+                "src/Vetor.cc",
+                "src/Insercao.cc",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

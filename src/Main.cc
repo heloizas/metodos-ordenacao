@@ -1,22 +1,22 @@
 #include <iostream>
 #include <fstream>
 
-#include "../include/Tratamento.h"
-#include "../include/Planeta.h"
+#include "../include/Ordenacao.h"
+#include "../include/Vetor.h"
 
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    ifstream arquivoDistancias(argv[1]);
+    ifstream arquivo(argv[1]);
     int qtdLinhas = stoi(argv[2]);
 
-    Tratamento arquivoTratamento(arquivoDistancias, qtdLinhas);
+    Ordenacao ordenacao(arquivo, qtdLinhas);
 
-    arquivoTratamento.PrintPlaneta(0);
+    ordenacao.PrintPlaneta(0);
 
-    // arquivoTratamento.Insercao();
-    // arquivoTratamento.QuickSort();
-    // arquivoTratamento.MergeSort();
+    // ordenacao.Insercao();
+    // ordenacao.QuickSort();
+    // ordenacao.MergeSort();
 
     return 0;
 }

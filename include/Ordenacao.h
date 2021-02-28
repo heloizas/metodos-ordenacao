@@ -1,21 +1,21 @@
 #include <stdio.h>
 #include <string>
 
-#include "Planeta.h"
+#include "Vetor.h"
 
 #ifndef TRATAMENTO_H
 #define TRATAMENTO_H
 
 using namespace std;
 
-class Tratamento {
+class Ordenacao {
     private:
         string auxNome;
         int auxDistancia;
         int quantidadeLinhas;
-        Planeta* planeta[];
+        Vetor* vetorPlaneta[];
     public:
-        Tratamento(ifstream &arquivoDistancias, int);
+        Ordenacao(ifstream &arquivo, int);
 
         void Insercao();
         void QuickSort();
@@ -23,7 +23,7 @@ class Tratamento {
 
         void PrintPlaneta(int);
 
-        ~Tratamento();
+        ~Ordenacao();
 };
 
 #endif
