@@ -3,6 +3,7 @@
 
 #include "../include/Ordenacao.h"
 #include "../include/Vetor.h"
+#include "../include/OrdenacaoInsercao.h"
 
 using namespace std;
 
@@ -12,11 +13,9 @@ int main(int argc, char* argv[]) {
 
     Ordenacao ordenacao(arquivo, qtdLinhas);
 
-    ordenacao.PrintPlaneta(0);
-
-    // ordenacao.Insercao();
+    ordenacao.Insercao();
     // ordenacao.QuickSort();
     // ordenacao.MergeSort();
-
+ 
     return 0;
 }

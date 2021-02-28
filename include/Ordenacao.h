@@ -2,18 +2,22 @@
 #include <string>
 
 #include "Vetor.h"
+#include "OrdenacaoInsercao.h"
 
-#ifndef TRATAMENTO_H
-#define TRATAMENTO_H
+#ifndef ORDENACAO_H
+#define ORDENACAO_H
 
 using namespace std;
 
 class Ordenacao {
     private:
+        OrdenacaoInsercao* ordenacaoInsercao;
+        static const int MAXTAM = 200000;
+        // static const int MAXTAM = 10;
         string auxNome;
         int auxDistancia;
         int quantidadeLinhas;
-        Vetor* vetorPlaneta[];
+        Vetor* vetorPlaneta[MAXTAM];
     public:
         Ordenacao(ifstream &arquivo, int);
 

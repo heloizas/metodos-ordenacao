@@ -7,15 +7,13 @@
 using namespace std;
 
 class Vetor {
-    private:
+    public:
         string nome;
         int distancia;
-    public:
         Vetor();
         void adicionarNome(string);
         void adicionarDistancia(int);
         ~Vetor();
-    friend class Ordenacao;
 };
 
 #endif

@@ -12,7 +12,7 @@
                 "src/Main.cc",
                 "src/Ordenacao.cc",
                 "src/Vetor.cc",
-                "src/Insercao.cc",
+                "src/OrdenacaoInsercao.cc",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

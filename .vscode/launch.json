@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": ["${fileDirname}/arquivo.txt", "2"],
+            "args": ["${fileDirname}/arquivo.txt", "9"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],

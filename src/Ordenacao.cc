@@ -3,13 +3,14 @@
 
 #include "../include/Ordenacao.h"
 #include "../include/Vetor.h"
+#include "../include/OrdenacaoInsercao.h"
 
 using namespace std;
 
 Ordenacao::Ordenacao(ifstream &arquivo, int qtdLinhas) {
     quantidadeLinhas = qtdLinhas;
 	if (arquivo.is_open()){
-		for(int i=0; i<qtdLinhas; i++) {
+		for(int i=0; i<quantidadeLinhas; i++) {
 	        arquivo >> auxNome >> auxDistancia;
             vetorPlaneta[i] = new Vetor();
             vetorPlaneta[i]->adicionarNome(auxNome);
@@ -21,7 +22,7 @@ Ordenacao::Ordenacao(ifstream &arquivo, int qtdLinhas) {
 }
 
 void Ordenacao::Insercao() {
-    printf("Teste Insercao\n");
+    ordenacaoInsercao = new OrdenacaoInsercao(*vetorPlaneta, quantidadeLinhas);
 }
 
 // void Ordenacao::QuickSort() {
