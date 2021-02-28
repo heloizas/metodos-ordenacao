@@ -10,7 +10,8 @@
                 "-lc++",
                 "-g",
                 "src/Main.cc",
-                "src/Teste.cc",
+                "src/Tratamento.cc",
+                "src/Planeta.cc",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

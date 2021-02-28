@@ -1,18 +1,22 @@
 #include <iostream>
 #include <fstream>
 
-#include "../include/Teste.h"
+#include "../include/Tratamento.h"
+#include "../include/Planeta.h"
 
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    ifstream arquivo(argv[1]);
-    int numeroLinhas = stoi(argv[2]);
+    ifstream arquivoDistancias(argv[1]);
+    int qtdLinhas = stoi(argv[2]);
 
-    Teste t;
-    t.Print();
+    Tratamento arquivoTratamento(arquivoDistancias, qtdLinhas);
 
-    cout << numeroLinhas << endl;
+    arquivoTratamento.PrintPlaneta(0);
+
+    // arquivoTratamento.Insercao();
+    // arquivoTratamento.QuickSort();
+    // arquivoTratamento.MergeSort();
 
     return 0;
 }
