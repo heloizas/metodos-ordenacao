@@ -4,6 +4,7 @@
 #include "../include/Ordenacao.h"
 #include "../include/Vetor.h"
 #include "../include/OrdenacaoInsercao.h"
+#include "../include/OrdenacaoHeap.h"
 
 using namespace std;
 
@@ -23,15 +24,24 @@ Ordenacao::Ordenacao(ifstream &arquivo, int qtdLinhas) {
 
 void Ordenacao::Insercao() {
     ordenacaoInsercao = new OrdenacaoInsercao(*vetorPlaneta, quantidadeLinhas);
+	ImprimirVetorOrdenado(*vetorPlaneta);
+} 
+
+void Ordenacao::HeapSort() {
+    ordenacaoHeap = new OrdenacaoHeap(*vetorPlaneta, quantidadeLinhas);
+    ImprimirVetorOrdenado(*vetorPlaneta);
 }
 
-// void Ordenacao::QuickSort() {
-//     printf("Teste QuickSort\n");
-// }
+void Ordenacao::QuickSort() {
+    printf("Teste QuickSort\n");
+}
 
-// void Ordenacao::MergeSort() {
-//     printf("Teste MergeSort\n");
-// }
+void Ordenacao::ImprimirVetorOrdenado(Vetor *vetorPlaneta) {
+    int quantidadeImpresso = 7;
+    for(int i=0; i < quantidadeImpresso; i++) {
+        cout << vetorPlaneta[i].nome << " " << vetorPlaneta[i].distancia << endl;
+    }
+}
 
 void Ordenacao::PrintPlaneta(int numPlaneta) {
     cout << vetorPlaneta[numPlaneta]->nome << " " << vetorPlaneta[numPlaneta]->distancia << endl;

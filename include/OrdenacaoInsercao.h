@@ -10,13 +10,11 @@ using namespace std;
 
 class OrdenacaoInsercao {
     private:
-        string nome;
-        int distancia;
-        int qtdLinhas;
+        string auxNome;
+        int auxDistancia, qtdLinhas;
     public:
         OrdenacaoInsercao(Vetor *vetorPlaneta, int);
         void Ordena(Vetor *vetorPlaneta, int);
-        void ImprimirVetorOrdenado(Vetor *vetorPlaneta);
         ~OrdenacaoInsercao();
     friend class Ordenacao;
 };

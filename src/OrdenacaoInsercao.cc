@@ -13,8 +13,6 @@ OrdenacaoInsercao::OrdenacaoInsercao(Vetor *vetorPlaneta, int quantidadeLinhas) 
 }
 
 void OrdenacaoInsercao::Ordena(Vetor *vetorPlaneta, int quantidadeLinhas) {
-    int auxDistancia;
-    string auxNome;
     for (int i=0; i < quantidadeLinhas; i++) {
         auxNome = vetorPlaneta[i].nome;
         auxDistancia = vetorPlaneta[i].distancia;
@@ -26,14 +24,6 @@ void OrdenacaoInsercao::Ordena(Vetor *vetorPlaneta, int quantidadeLinhas) {
         }
         vetorPlaneta[j+1].nome = auxNome;
         vetorPlaneta[j+1].distancia = auxDistancia;
-    }
-    ImprimirVetorOrdenado(vetorPlaneta);
-}
-
-void OrdenacaoInsercao::ImprimirVetorOrdenado(Vetor *vetorPlaneta) {
-    int quantidadeImpresso = 7;
-    for(int i=0; i < quantidadeImpresso; i++) {
-        cout << vetorPlaneta[i].nome << " " << vetorPlaneta[i].distancia << endl;
     }
 }
 

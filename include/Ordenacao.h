@@ -3,6 +3,7 @@
 
 #include "Vetor.h"
 #include "OrdenacaoInsercao.h"
+#include "OrdenacaoHeap.h"
 
 #ifndef ORDENACAO_H
 #define ORDENACAO_H
@@ -12,8 +13,8 @@ using namespace std;
 class Ordenacao {
     private:
         OrdenacaoInsercao* ordenacaoInsercao;
+        OrdenacaoHeap* ordenacaoHeap;
         static const int MAXTAM = 200000;
-        // static const int MAXTAM = 10;
         string auxNome;
         int auxDistancia;
         int quantidadeLinhas;
@@ -22,9 +23,10 @@ class Ordenacao {
         Ordenacao(ifstream &arquivo, int);
 
         void Insercao();
+        void HeapSort();
         void QuickSort();
-        void MergeSort();
 
+        void ImprimirVetorOrdenado(Vetor *vetorPlaneta);
         void PrintPlaneta(int);
 
         ~Ordenacao();
