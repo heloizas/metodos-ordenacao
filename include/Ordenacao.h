@@ -4,6 +4,7 @@
 #include "Vetor.h"
 #include "OrdenacaoInsercao.h"
 #include "OrdenacaoHeap.h"
+#include "OrdenacaoQuick.h"
 
 #ifndef ORDENACAO_H
 #define ORDENACAO_H
@@ -14,6 +15,8 @@ class Ordenacao {
     private:
         OrdenacaoInsercao* ordenacaoInsercao;
         OrdenacaoHeap* ordenacaoHeap;
+        OrdenacaoQuick* ordenacaoQuick;
+
         static const int MAXTAM = 200000;
         string auxNome;
         int auxDistancia;

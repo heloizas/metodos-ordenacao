@@ -5,6 +5,7 @@
 #include "../include/Vetor.h"
 #include "../include/OrdenacaoInsercao.h"
 #include "../include/OrdenacaoHeap.h"
+#include "../include/OrdenacaoQuick.h"
 
 using namespace std;
 
@@ -15,8 +16,8 @@ int main(int argc, char* argv[]) {
     Ordenacao ordenacao(arquivo, qtdLinhas);
 
     // ordenacao.Insercao();
-    ordenacao.HeapSort();
-    // ordenacao.QuickSort();
+    // ordenacao.HeapSort();
+    ordenacao.QuickSort();
  
     return 0;
 }
