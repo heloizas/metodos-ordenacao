@@ -5,6 +5,7 @@
 #include "OrdenacaoInsercao.h"
 #include "OrdenacaoHeap.h"
 #include "OrdenacaoQuick.h"
+#include "OrdenacaoShell.h"
 
 #ifndef ORDENACAO_H
 #define ORDENACAO_H
@@ -16,6 +17,7 @@ class Ordenacao {
         OrdenacaoInsercao* ordenacaoInsercao;
         OrdenacaoHeap* ordenacaoHeap;
         OrdenacaoQuick* ordenacaoQuick;
+        OrdenacaoShell* ordenacaoShell;
 
         static const int MAXTAM = 200000;
         string auxNome;
@@ -28,6 +30,7 @@ class Ordenacao {
         void Insercao();
         void HeapSort();
         void QuickSort();
+        void Shell();
 
         void ImprimirVetorOrdenado(Vetor *vetorPlaneta);
         void PrintPlaneta(int);

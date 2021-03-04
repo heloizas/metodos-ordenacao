@@ -14,7 +14,7 @@
                 "src/Vetor.cc",
                 "src/OrdenacaoInsercao.cc",
                 "src/OrdenacaoHeap.cc",
-                "src/OrdenacaoQuick.cc",
+                "src/OrdenacaoShell.cc",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

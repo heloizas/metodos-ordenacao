@@ -6,6 +6,7 @@
 #include "../include/OrdenacaoInsercao.h"
 #include "../include/OrdenacaoHeap.h"
 #include "../include/OrdenacaoQuick.h"
+#include "../include/OrdenacaoShell.h"
 
 using namespace std;
 
@@ -35,6 +36,11 @@ void Ordenacao::HeapSort() {
 
 void Ordenacao::QuickSort() {
     ordenacaoQuick = new OrdenacaoQuick(*vetorPlaneta, quantidadeLinhas);
+    ImprimirVetorOrdenado(*vetorPlaneta);
+}
+
+void Ordenacao::Shell() {
+    ordenacaoShell = new OrdenacaoShell(*vetorPlaneta, quantidadeLinhas);
     ImprimirVetorOrdenado(*vetorPlaneta);
 }
 
