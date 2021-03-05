@@ -7,30 +7,23 @@
 
 using namespace std;
 
-OrdenacaoShell::OrdenacaoShell(Vetor *vetorPlaneta, int quantidadeLinhas) {
+OrdenacaoShell::OrdenacaoShell(Vetor *vetorPlaneta[], int quantidadeLinhas) {
     qtdLinhas = quantidadeLinhas;
     Ordena(vetorPlaneta, qtdLinhas);
 }
 
-void OrdenacaoShell::Ordena(Vetor *vetorPlaneta, int quantidadeLinhas) {
-    // for (int gap = quantidadeLinhas/2; gap > 0; gap /= 2) { 
-    //     for (int i = gap; i < quantidadeLinhas; i += 1) { 
-    //         int temp = vetorPlaneta[i].distancia; 
-    //         int j;             
-    //         for (j = i; j >= gap && vetorPlaneta[j - gap].distancia > temp; j -= gap) 
-    //             vetorPlaneta[j].distancia = vetorPlaneta[j - gap].distancia; 
-    //             vetorPlaneta[j].distancia = temp; 
-    //     } 
-    // } 
+void OrdenacaoShell::Ordena(Vetor *vetorPlaneta[], int quantidadeLinhas) {
     for (int distanciaElementos = quantidadeLinhas / 2; distanciaElementos > 0; distanciaElementos /= 2) {
     for (int i = distanciaElementos; i < quantidadeLinhas; i += 1) {
-      int temp = vetorPlaneta[i].distancia; 
+      int auxDist = vetorPlaneta[i]->distancia;
+      string auxNome = vetorPlaneta[i]->nome;
       int j;
-      for (j = i; j >= distanciaElementos && vetorPlaneta[j - distanciaElementos].distancia < temp; j -= distanciaElementos) {
-        vetorPlaneta[j].distancia = vetorPlaneta[j-distanciaElementos].distancia;
-        vetorPlaneta[j].nome = vetorPlaneta[j-distanciaElementos].nome;
+      for (j = i; j >= distanciaElementos && vetorPlaneta[j - distanciaElementos]->distancia < auxDist; j -= distanciaElementos) {
+        vetorPlaneta[j]->distancia = vetorPlaneta[j-distanciaElementos]->distancia;
+        vetorPlaneta[j]->nome = vetorPlaneta[j-distanciaElementos]->nome;
       }
-      vetorPlaneta[j].distancia = temp;
+      vetorPlaneta[j]->distancia = auxDist;
+      vetorPlaneta[j]->nome = auxNome;
     }
   }
 }

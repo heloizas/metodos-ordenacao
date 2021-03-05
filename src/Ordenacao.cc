@@ -25,22 +25,32 @@ Ordenacao::Ordenacao(ifstream &arquivo, int qtdLinhas) {
 }
 
 void Ordenacao::Insercao() {
+    cout << "Inserção: " << endl << endl;
     ordenacaoInsercao = new OrdenacaoInsercao(vetorPlaneta, quantidadeLinhas);
 	ImprimirVetorOrdenado(vetorPlaneta);
 } 
 
 void Ordenacao::HeapSort() {
+    cout << "Inserção: " << endl << endl;
     ordenacaoHeap = new OrdenacaoHeap(vetorPlaneta, quantidadeLinhas);
     ImprimirVetorOrdenado(vetorPlaneta);
 }
 
 void Ordenacao::QuickSort() {
+    cout << "QuickSort: " << endl << endl;
     ordenacaoQuick = new OrdenacaoQuick(vetorPlaneta, quantidadeLinhas);
     ImprimirVetorOrdenado(vetorPlaneta);
 }
 
+void Ordenacao::QuickSortMelhorado() {
+    cout << "QuickSort Melhorado: " << endl << endl;
+    ordenacaoQuickMelhorado = new OrdenacaoQuickMelhorado(vetorPlaneta, quantidadeLinhas);
+    ImprimirVetorOrdenado(vetorPlaneta);
+}
+
 void Ordenacao::Shell() {
-    ordenacaoShell = new OrdenacaoShell(*vetorPlaneta, quantidadeLinhas);
+    cout << "Shell: " << endl;
+    ordenacaoShell = new OrdenacaoShell(vetorPlaneta, quantidadeLinhas);
     ImprimirVetorOrdenado(vetorPlaneta);
 }
 

@@ -6,6 +6,7 @@
 #include "../include/OrdenacaoInsercao.h"
 #include "../include/OrdenacaoHeap.h"
 #include "../include/OrdenacaoQuick.h"
+#include "../include/OrdenacaoQuickMelhorado.h"
 #include "../include/OrdenacaoShell.h"
 
 using namespace std;
@@ -16,9 +17,11 @@ int main(int argc, char* argv[]) {
 
     Ordenacao ordenacao(arquivo, qtdLinhas);
 
+    // Deixar descomentado apenas o método que irá usar //
     // ordenacao.Insercao(); 
     // ordenacao.HeapSort();
-    ordenacao.QuickSort();
+    // ordenacao.QuickSort();
+    // ordenacao.QuickSortMelhorado();
     // ordenacao.Shell();
  
     return 0;
