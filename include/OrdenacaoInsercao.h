@@ -13,8 +13,8 @@ class OrdenacaoInsercao {
         string auxNome;
         int auxDistancia, qtdLinhas;
     public:
-        OrdenacaoInsercao(Vetor *vetorPlaneta, int);
-        void Ordena(Vetor *vetorPlaneta, int);
+        OrdenacaoInsercao(Vetor *vetorPlaneta[], int);
+        void Ordena(Vetor *vetorPlaneta[], int);
         ~OrdenacaoInsercao();
     friend class Ordenacao;
 };

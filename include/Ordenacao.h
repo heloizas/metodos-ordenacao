@@ -32,7 +32,7 @@ class Ordenacao {
         void QuickSort();
         void Shell();
 
-        void ImprimirVetorOrdenado(Vetor *vetorPlaneta);
+        void ImprimirVetorOrdenado(Vetor *vetorPlaneta[]);
         void PrintPlaneta(int);
 
         ~Ordenacao();

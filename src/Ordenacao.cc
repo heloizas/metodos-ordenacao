@@ -25,29 +25,29 @@ Ordenacao::Ordenacao(ifstream &arquivo, int qtdLinhas) {
 }
 
 void Ordenacao::Insercao() {
-    ordenacaoInsercao = new OrdenacaoInsercao(*vetorPlaneta, quantidadeLinhas);
-	ImprimirVetorOrdenado(*vetorPlaneta);
+    ordenacaoInsercao = new OrdenacaoInsercao(vetorPlaneta, quantidadeLinhas);
+	ImprimirVetorOrdenado(vetorPlaneta);
 } 
 
 void Ordenacao::HeapSort() {
     ordenacaoHeap = new OrdenacaoHeap(*vetorPlaneta, quantidadeLinhas);
-    ImprimirVetorOrdenado(*vetorPlaneta);
+    ImprimirVetorOrdenado(vetorPlaneta);
 }
 
 void Ordenacao::QuickSort() {
     ordenacaoQuick = new OrdenacaoQuick(*vetorPlaneta, quantidadeLinhas);
-    ImprimirVetorOrdenado(*vetorPlaneta);
+    ImprimirVetorOrdenado(vetorPlaneta);
 }
 
 void Ordenacao::Shell() {
     ordenacaoShell = new OrdenacaoShell(*vetorPlaneta, quantidadeLinhas);
-    ImprimirVetorOrdenado(*vetorPlaneta);
+    ImprimirVetorOrdenado(vetorPlaneta);
 }
 
-void Ordenacao::ImprimirVetorOrdenado(Vetor *vetorPlaneta) {
+void Ordenacao::ImprimirVetorOrdenado(Vetor *vetorPlaneta[]) {
     int quantidadeImpresso = 7;
     for(int i=0; i < quantidadeImpresso; i++) {
-        cout << vetorPlaneta[i].nome << " " << vetorPlaneta[i].distancia << endl;
+        cout << vetorPlaneta[i]->nome << " " << vetorPlaneta[i]->distancia << endl;
     }
 }
 
