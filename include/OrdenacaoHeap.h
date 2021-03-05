@@ -13,9 +13,9 @@ class OrdenacaoHeap {
         string auxNome;
         int auxDistancia, qtdLinhas;;
     public:
-        OrdenacaoHeap(Vetor *vetorPlaneta, int);
-        void Ordena(Vetor *vetorPlaneta, int);
-        void Constroi(Vetor *vetorPlaneta, int, int);
+        OrdenacaoHeap(Vetor *vetorPlaneta[], int);
+        void Ordena(Vetor *vetorPlaneta[], int);
+        void Constroi(Vetor *vetorPlaneta[], int, int);
         ~OrdenacaoHeap();
     friend class Ordenacao;
 };

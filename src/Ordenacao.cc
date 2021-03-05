@@ -30,7 +30,7 @@ void Ordenacao::Insercao() {
 } 
 
 void Ordenacao::HeapSort() {
-    ordenacaoHeap = new OrdenacaoHeap(*vetorPlaneta, quantidadeLinhas);
+    ordenacaoHeap = new OrdenacaoHeap(vetorPlaneta, quantidadeLinhas);
     ImprimirVetorOrdenado(vetorPlaneta);
 }
 
