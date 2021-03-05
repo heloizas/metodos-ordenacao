@@ -13,9 +13,9 @@ class OrdenacaoQuick {
         string auxNome;
         int auxDistancia, qtdLinhas;;
     public:
-        OrdenacaoQuick(Vetor *vetorPlaneta, int);
-        void Ordena(Vetor *vetorPlaneta, int, int );
-        int Particao(Vetor *vetorPlaneta, int, int );
+        OrdenacaoQuick(Vetor *vetorPlaneta[], int);
+        void Ordena(Vetor *vetorPlaneta[], int, int );
+        int Particao(Vetor *vetorPlaneta[], int, int );
         ~OrdenacaoQuick();
     friend class Ordenacao;
 };

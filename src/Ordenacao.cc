@@ -35,7 +35,7 @@ void Ordenacao::HeapSort() {
 }
 
 void Ordenacao::QuickSort() {
-    ordenacaoQuick = new OrdenacaoQuick(*vetorPlaneta, quantidadeLinhas);
+    ordenacaoQuick = new OrdenacaoQuick(vetorPlaneta, quantidadeLinhas);
     ImprimirVetorOrdenado(vetorPlaneta);
 }
 

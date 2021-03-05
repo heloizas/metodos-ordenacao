@@ -17,8 +17,8 @@ int main(int argc, char* argv[]) {
     Ordenacao ordenacao(arquivo, qtdLinhas);
 
     // ordenacao.Insercao(); 
-    ordenacao.HeapSort();
-    // ordenacao.QuickSort();
+    // ordenacao.HeapSort();
+    ordenacao.QuickSort();
     // ordenacao.Shell();
  
     return 0;

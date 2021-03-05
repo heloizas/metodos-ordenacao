@@ -7,27 +7,27 @@
 
 using namespace std;
 
-OrdenacaoQuick::OrdenacaoQuick(Vetor *vetorPlaneta, int quantidadeLinhas) {
+OrdenacaoQuick::OrdenacaoQuick(Vetor *vetorPlaneta[], int quantidadeLinhas) {
     qtdLinhas = quantidadeLinhas;
     Ordena(vetorPlaneta, 0, quantidadeLinhas-1); 
 }
    
-int OrdenacaoQuick::Particao(Vetor *vetorPlaneta, int min, int max) { 
-    int pico = vetorPlaneta[max].distancia;
+int OrdenacaoQuick::Particao(Vetor *vetorPlaneta[], int min, int max) { 
+    int pico = vetorPlaneta[max]->distancia;
     int i = (min - 1);   
     for (int j = min; j <= max- 1; j++) { 
-        if (vetorPlaneta[j].distancia >= pico){ 
+        if (vetorPlaneta[j]->distancia >= pico){ 
             i++; 
-            swap(vetorPlaneta[i].distancia, vetorPlaneta[j].distancia);
-            swap(vetorPlaneta[i].nome, vetorPlaneta[j].nome);
+            swap(vetorPlaneta[i]->distancia, vetorPlaneta[j]->distancia);
+            swap(vetorPlaneta[i]->nome, vetorPlaneta[j]->nome);
         } 
     } 
-    swap(vetorPlaneta[i + 1].distancia, vetorPlaneta[max].distancia);
-    swap(vetorPlaneta[i + 1].nome, vetorPlaneta[max].nome);
+    swap(vetorPlaneta[i + 1]->distancia, vetorPlaneta[max]->distancia);
+    swap(vetorPlaneta[i + 1]->nome, vetorPlaneta[max]->nome);
     return (i + 1); 
 } 
    
-void OrdenacaoQuick::Ordena(Vetor *vetorPlaneta, int min, int max) { 
+void OrdenacaoQuick::Ordena(Vetor *vetorPlaneta[], int min, int max) { 
     if (min < max) { 
         int pico = Particao(vetorPlaneta, min, max); 
         Ordena(vetorPlaneta, min, pico - 1); 
