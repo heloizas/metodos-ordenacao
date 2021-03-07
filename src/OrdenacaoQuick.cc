@@ -22,7 +22,8 @@ void OrdenacaoQuick::QuickSort(Vetor *vetorPlaneta[], int left, int right) {
 void OrdenacaoQuick::Particao(Vetor *vetorPlaneta[], int Esq, int Dir, int *i, int *j) {
     Vetor x;
     Vetor w;
-    *i = Esq; *j = Dir;
+    *i = Esq; 
+    *j = Dir;
     x.distancia = vetorPlaneta[(*i + *j)/2]->distancia;
     x.nome = vetorPlaneta[(*i + *j)/2]->nome;
     do {
