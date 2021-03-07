@@ -17,12 +17,12 @@ int main(int argc, char* argv[]) {
 
     Ordenacao ordenacao(arquivo, qtdLinhas);
 
-    // Deixar descomentado apenas o método que irá usar //
+    /* Descomentar apenas o método que irá usar */
     // ordenacao.Insercao(); 
     // ordenacao.HeapSort();
-    // ordenacao.QuickSort();
+    ordenacao.QuickSort();
     // ordenacao.QuickSortMelhorado();
-    ordenacao.Shell();
+    // ordenacao.Shell();
  
     return 0;
 }

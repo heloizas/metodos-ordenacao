@@ -13,6 +13,9 @@
         "memory": "cpp",
         "stack": "cpp",
         "type_traits": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "__tuple": "cpp",
+        "array": "cpp",
+        "ios": "cpp"
     }
 }

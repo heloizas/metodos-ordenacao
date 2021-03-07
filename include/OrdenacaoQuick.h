@@ -14,8 +14,8 @@ class OrdenacaoQuick {
         int auxDistancia, qtdLinhas;;
     public:
         OrdenacaoQuick(Vetor *vetorPlaneta[], int);
-        void Ordena(Vetor *vetorPlaneta[], int, int );
-        int Particao(Vetor *vetorPlaneta[], int, int );
+        void QuickSort(Vetor *vetorPlaneta[], int, int);
+        void Particao(Vetor *vetorPlaneta[], int, int, int*, int*);
         ~OrdenacaoQuick();
     friend class Ordenacao;
 };
