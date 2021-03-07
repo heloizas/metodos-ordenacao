@@ -31,7 +31,7 @@ void Ordenacao::Insercao() {
 } 
 
 void Ordenacao::HeapSort() {
-    cout << "Inserção: " << endl << endl;
+    cout << "HeapSort: " << endl << endl;
     ordenacaoHeap = new OrdenacaoHeap(vetorPlaneta, quantidadeLinhas);
     ImprimirVetorOrdenado(vetorPlaneta);
 }

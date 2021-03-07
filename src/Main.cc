@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
     // ordenacao.HeapSort();
     // ordenacao.QuickSort();
     // ordenacao.QuickSortMelhorado();
-    // ordenacao.Shell();
+    ordenacao.Shell();
  
     return 0;
 }
