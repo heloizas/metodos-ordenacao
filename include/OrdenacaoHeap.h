@@ -10,12 +10,10 @@ using namespace std;
 
 class OrdenacaoHeap {
     private:
-        string auxNome;
-        int auxDistancia, qtdLinhas;;
-    public:
-        OrdenacaoHeap(Vetor *vetorPlaneta[], int);
         void Ordena(Vetor *vetorPlaneta[], int);
         void Constroi(Vetor *vetorPlaneta[], int, int);
+    public:
+        OrdenacaoHeap(Vetor *vetorPlaneta[], int);
         ~OrdenacaoHeap();
     friend class Ordenacao;
 };

@@ -12,16 +12,16 @@ OrdenacaoQuickMelhorado::OrdenacaoQuickMelhorado(Vetor *vetorPlaneta[], int quan
     QuickSortMelhorado(vetorPlaneta, 0, quantidadeLinhas - 1);
 }
 
-void OrdenacaoQuickMelhorado::QuickSortMelhorado(Vetor *vetorPlaneta[], int left, int right) {
-  if (right-left > 10) {
+void OrdenacaoQuickMelhorado::QuickSortMelhorado(Vetor *vetorPlaneta[], int esquerda, int direita) {
+  if (direita-esquerda > 10) {
     int i, j;
-    Particao(vetorPlaneta, left, right, &i, &j);
-    if (left < j) QuickSort(vetorPlaneta, left, j);
-    if (i < right) QuickSort(vetorPlaneta, i, right);
+    Particao(vetorPlaneta, esquerda, direita, &i, &j);
+    if (esquerda < j) QuickSort(vetorPlaneta, esquerda, j);
+    if (i < direita) QuickSort(vetorPlaneta, i, direita);
   } else {
     Vetor aux;
     int j;
-    for (int i = left; i <= right; i++) {
+    for (int i = esquerda; i <= direita; i++) {
       aux.distancia = vetorPlaneta[i]->distancia;
       aux.nome = vetorPlaneta[i]->nome;
       j = i-1;
@@ -36,11 +36,11 @@ void OrdenacaoQuickMelhorado::QuickSortMelhorado(Vetor *vetorPlaneta[], int left
   }
 }
    
-void OrdenacaoQuickMelhorado::QuickSort(Vetor *vetorPlaneta[], int left, int right) {
+void OrdenacaoQuickMelhorado::QuickSort(Vetor *vetorPlaneta[], int esquerda, int direita) {
     int i, j;
-    Particao(vetorPlaneta, left, right, &i, &j);
-    if (left < j) QuickSort(vetorPlaneta, left, j);
-    if (i < right) QuickSort(vetorPlaneta, i, right);
+    Particao(vetorPlaneta, esquerda, direita, &i, &j);
+    if (esquerda < j) QuickSort(vetorPlaneta, esquerda, j);
+    if (i < direita) QuickSort(vetorPlaneta, i, direita);
 }
 
 void OrdenacaoQuickMelhorado::Particao(Vetor *vetorPlaneta[], int Esq, int Dir, int *i, int *j) {

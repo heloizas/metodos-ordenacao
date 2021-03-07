@@ -17,10 +17,10 @@ int main(int argc, char* argv[]) {
 
     Ordenacao ordenacao(arquivo, qtdLinhas);
 
-    /* Descomentar apenas o método que irá usar */
+    /* DESCOMENTAR APENAS O MÉTODO QUE FOR UTILIZAR */
     // ordenacao.Insercao(); 
-    // ordenacao.HeapSort();
-    ordenacao.QuickSort();
+    ordenacao.HeapSort();
+    // ordenacao.QuickSort();
     // ordenacao.QuickSortMelhorado();
     // ordenacao.Shell();
  

@@ -10,11 +10,10 @@ using namespace std;
 
 class OrdenacaoShell {
     private:
-        string auxNome;
-        int auxDistancia, qtdLinhas;
+        void Ordena(Vetor *vetorPlaneta[], int);
+        int qtdLinhas;
     public:
         OrdenacaoShell(Vetor *vetorPlaneta[], int);
-        void Ordena(Vetor *vetorPlaneta[], int);
         ~OrdenacaoShell();
     friend class Ordenacao;
 };
