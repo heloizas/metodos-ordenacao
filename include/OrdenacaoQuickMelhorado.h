@@ -10,10 +10,10 @@ using namespace std;
 
 class OrdenacaoQuickMelhorado {
     private:
+        int qtdLinhas;
         void QuickSortMelhorado(Vetor *vetorPlaneta[], int, int);
         void QuickSort(Vetor *vetorPlaneta[], int, int);
         void Particao(Vetor *vetorPlaneta[], int, int, int*, int*);
-        int qtdLinhas;
     public:
         OrdenacaoQuickMelhorado(Vetor *vetorPlaneta[], int);
         ~OrdenacaoQuickMelhorado();

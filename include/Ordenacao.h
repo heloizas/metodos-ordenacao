@@ -21,14 +21,15 @@ class Ordenacao {
         OrdenacaoQuickMelhorado* ordenacaoQuickMelhorado;
         OrdenacaoShell* ordenacaoShell;
 
-        static const int MAXTAM = 200000;
         string auxNome;
         int auxDistancia;
         int quantidadeLinhas;
+        static const int MAXTAM = 200000;
         Vetor* vetorPlaneta[MAXTAM];
     public:
         Ordenacao(ifstream &arquivo, int);
 
+        void GerarVetor(ifstream &arquivo);
         void Insercao();
         void HeapSort();
         void QuickSort();
@@ -36,7 +37,6 @@ class Ordenacao {
         void Shell();
 
         void ImprimirVetorOrdenado(Vetor *vetorPlaneta[]);
-        void PrintPlaneta(int);
 
         ~Ordenacao();
 };

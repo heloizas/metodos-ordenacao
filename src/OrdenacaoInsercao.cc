@@ -9,6 +9,7 @@ using namespace std;
 
 OrdenacaoInsercao::OrdenacaoInsercao(Vetor *vetorPlaneta[], int quantidadeLinhas) {
     qtdLinhas = quantidadeLinhas;
+    auxDistancia = 0;
     Ordena(vetorPlaneta, qtdLinhas);
 }
 

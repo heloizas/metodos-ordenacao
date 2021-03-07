@@ -9,9 +9,11 @@
 using namespace std;
 
 class OrdenacaoShell {
+    // Extensão do método de inserção
     private:
+        int qtdLinhas, auxDist;
+        string auxNome;
         void Ordena(Vetor *vetorPlaneta[], int);
-        int qtdLinhas;
     public:
         OrdenacaoShell(Vetor *vetorPlaneta[], int);
         ~OrdenacaoShell();

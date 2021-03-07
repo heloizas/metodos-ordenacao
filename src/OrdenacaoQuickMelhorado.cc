@@ -16,52 +16,64 @@ void OrdenacaoQuickMelhorado::QuickSortMelhorado(Vetor *vetorPlaneta[], int esqu
   if (direita-esquerda > 10) {
     int i, j;
     Particao(vetorPlaneta, esquerda, direita, &i, &j);
-    if (esquerda < j) QuickSort(vetorPlaneta, esquerda, j);
-    if (i < direita) QuickSort(vetorPlaneta, i, direita);
+    if (esquerda < j) {
+      QuickSort(vetorPlaneta, esquerda, j);
+    }
+    if (i < direita) {
+      QuickSort(vetorPlaneta, i, direita);
+    }
   } else {
     Vetor aux;
-    int j;
+    // Insercao
     for (int i = esquerda; i <= direita; i++) {
       aux.distancia = vetorPlaneta[i]->distancia;
       aux.nome = vetorPlaneta[i]->nome;
-      j = i-1;
+      int j = i-1;
       while ((j >= 0) && (aux.distancia > vetorPlaneta[j]->distancia)) {
-        vetorPlaneta[j+1]->distancia = vetorPlaneta[j]->distancia;
         vetorPlaneta[j+1]->nome = vetorPlaneta[j]->nome;
+        vetorPlaneta[j+1]->distancia = vetorPlaneta[j]->distancia;
         j--;
       }
-      vetorPlaneta[j+1]->distancia = aux.distancia;
       vetorPlaneta[j+1]->nome = aux.nome;
-    }
+      vetorPlaneta[j+1]->distancia = aux.distancia;
+    } 
   }
 }
    
 void OrdenacaoQuickMelhorado::QuickSort(Vetor *vetorPlaneta[], int esquerda, int direita) {
     int i, j;
     Particao(vetorPlaneta, esquerda, direita, &i, &j);
-    if (esquerda < j) QuickSort(vetorPlaneta, esquerda, j);
-    if (i < direita) QuickSort(vetorPlaneta, i, direita);
+    if (esquerda < j) {
+      QuickSort(vetorPlaneta, esquerda, j);
+    } 
+    if (i < direita) {
+      QuickSort(vetorPlaneta, i, direita);
+    }
 }
 
-void OrdenacaoQuickMelhorado::Particao(Vetor *vetorPlaneta[], int Esq, int Dir, int *i, int *j) {
-    Vetor x;
-    Vetor w;
-    *i = Esq; 
-    *j = Dir;
-    x.distancia = vetorPlaneta[(*i + *j)/2]->distancia;
-    x.nome = vetorPlaneta[(*i + *j)/2]->nome;
+void OrdenacaoQuickMelhorado::Particao(Vetor *vetorPlaneta[], int esquerda, int direita, int *i, int *j) {
+    Vetor aux1;
+    Vetor aux2;
+    *i = esquerda; 
+    *j = direita;
+    aux1.distancia = vetorPlaneta[(*i + *j)/2]->distancia;
+    aux1.nome = vetorPlaneta[(*i + *j)/2]->nome;
     do {
-        while (x.distancia < vetorPlaneta[*i]->distancia) (*i)++;
-        while (x.distancia > vetorPlaneta[*j]->distancia) (*j)--;
+        while (aux1.distancia < vetorPlaneta[*i]->distancia) 
+        (*i)++;
+        while (aux1.distancia > vetorPlaneta[*j]->distancia) 
+        (*j)--;
             if (*i <= *j) {
-                w.distancia = vetorPlaneta[*i]->distancia; 
+                aux2.distancia = vetorPlaneta[*i]->distancia; 
                 vetorPlaneta[*i]->distancia = vetorPlaneta[*j]->distancia; 
-                vetorPlaneta[*j]->distancia = w.distancia;
+                vetorPlaneta[*j]->distancia = aux2.distancia;
 
-                w.nome = vetorPlaneta[*i]->nome; 
+                aux2.nome = vetorPlaneta[*i]->nome; 
                 vetorPlaneta[*i]->nome = vetorPlaneta[*j]->nome; 
-                vetorPlaneta[*j]->nome = w.nome;
-                (*i)++; (*j)--;
+                vetorPlaneta[*j]->nome = aux2.nome;
+                
+                (*i)++; 
+                (*j)--;
             }
     } while (*i <= *j);
 }

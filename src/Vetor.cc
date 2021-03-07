@@ -9,11 +9,11 @@ Vetor::Vetor() {
     distancia= 0;
 }
 
-void Vetor::adicionarNome(string auxNome) {
+void Vetor::AdicionarNome(string auxNome) {
     nome = auxNome;
 }
 
-void Vetor::adicionarDistancia(int auxDistancia) {
+void Vetor::AdicionarDistancia(int auxDistancia) {
     distancia = auxDistancia;
 }
 

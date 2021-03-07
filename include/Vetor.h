@@ -11,8 +11,8 @@ class Vetor {
         string nome;
         int distancia;
         Vetor();
-        void adicionarNome(string);
-        void adicionarDistancia(int);
+        void AdicionarNome(string);
+        void AdicionarDistancia(int);
         ~Vetor();
 };
 
